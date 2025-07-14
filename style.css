@@ -1,0 +1,60 @@
+@import url(fonts/norse-open-sans/stylesheet.css);
+
+body {
+  margin: 0;
+  font-family: "open_sansregular", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: 'norsebold', Arial, Helvetica, sans-serif;
+}
+
+.bg-img {
+  /* background-color: black; */
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.left-pane {
+  /* height: 100vh;
+  min-width: 10vw; */
+  background-image: url(images/halie-west-25xggax4bSA-unsplash.jpg);
+  background-size: cover;
+  flex-grow: 1;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.odin-logo {
+  background-color: hsla(0, 0%, 0%, 0.432);
+  text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.odin-logo img {
+    max-width: 10vw;
+}
+
+.img-credit {
+    text-align: center;
+}
+
+.left-pane a {
+  color: white;
+}
+
+.right-pane {
+  flex-grow: 2;
+}
