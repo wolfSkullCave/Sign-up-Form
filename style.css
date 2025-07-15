@@ -1,60 +1,137 @@
 @import url(fonts/norse-open-sans/stylesheet.css);
 
+/* === Typography === */
+
 body {
+  /* Box Model */
   margin: 0;
+
+  /* Typography */
   font-family: "open_sansregular", Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    font-family: 'norsebold', Arial, Helvetica, sans-serif;
+  /* Typography */
+  font-family: "norsebold", Arial, Helvetica, sans-serif;
+  font-size: 6rem;
 }
 
-.bg-img {
-  /* background-color: black; */
-  width: 100vw;
-  height: 100vh;
+/* === Layout === */
 
+.signup {
+  /* Layout */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
+
+  /* Box Model */
+  width: 100vw;
+  height: 100vh;
 }
 
-.left-pane {
-  /* height: 100vh;
-  min-width: 10vw; */
-  background-image: url(images/halie-west-25xggax4bSA-unsplash.jpg);
-  background-size: cover;
-  flex-grow: 1;
-  color: white;
-
+.signup__left {
+  /* Layout */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-grow: 1;
+  min-width: 40vw;
+
+  /* Typography */
+  color: white;
+
+  /* Visual */
+  background-image: url(images/halie-west-25xggax4bSA-unsplash.jpg);
+  background-size: cover;
 }
 
-.odin-logo {
-  background-color: hsla(0, 0%, 0%, 0.432);
-  text-align: center;
+.signup__right {
+  /* Layout */
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 
+  /* Visual */
+  background-color: #f9fafb;
+}
+
+.signup__text {
+  padding: 2rem;
+  max-width: 700px;
+}
+
+.signup__form {
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+
+  background-color: white;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.151);
+}
+
+.signup__button {
+  padding: 2rem;
+}
+
+/* === Components === */
+
+.signup__logo {
+  /* Layout */
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  /* Box Model */
+  max-height: 9rem;
+  margin-top: 24vh;
+
+  /* Typography */
+  text-align: center;
+
+  /* Visual */
+  background-color: hsla(0, 0%, 0%, 0.432);
 }
 
-.odin-logo img {
-    max-width: 10vw;
+.signup__logo img {
+  /* Box Model */
+  max-width: 10vw;
+  max-height: 90%;
 }
 
-.img-credit {
-    text-align: center;
+.signup__img-credit {
+  /* Typography */
+  text-align: center;
+  font-size: 0.8rem;
 }
 
-.left-pane a {
+.signup__left a {
+  /* Typography */
   color: white;
 }
 
-.right-pane {
-  flex-grow: 2;
+.signup__form form {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+.signup__form h2 {
+  margin-top: 0;
+}
+
+.signup__form fieldset {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0;
+
+  border: none;
+}
+
+.signup__form label {
+  margin-top: 0.5rem;
 }

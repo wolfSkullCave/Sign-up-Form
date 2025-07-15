@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up Form</title>
+    <title>Sign Up signup__form</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="bg-img">
-      <div class="left-pane">
-        <div class="odin-logo">
-            <img src="images/odin-lined.png" alt="" />
-            <h1>Odin</h1>
+    <div class="signup">
+      <div class="signup__left">
+        <div class="signup__logo">
+          <img src="images/odin-lined.png" alt="" />
+          <h1>Odin</h1>
         </div>
-        <div class="img-credit">
+        <div class="signup__img-credit">
           <p>
             Photo by
             <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on
@@ -24,7 +24,50 @@
           </p>
         </div>
       </div>
-      <div class="right-pane"></div>
+      <div class="signup__right">
+        <div class="signup__text">
+          <h2>
+            This is not a real service! You know you need something like this in
+            your life to help you realise your deepest dreams.<br />
+            Sign up now to get started.
+          </h2>
+          <h2>You <em>know</em> you want to.</h2>
+        </div>
+        <div class="signup__form">
+          <h2>Let's do this!</h2>
+
+          <form action="" id="signupForm">
+            <div class="signup__formLeft">
+              <fieldset>
+                <label>First Name</label>
+                <input type="text" name="" />
+
+                <label>Email</label>
+                <input type="email" name="" />
+
+                <label>Password</label>
+                <input type="password" name="" />
+              </fieldset>
+            </div>
+            <div class="signup__formRight">
+              <fieldset>
+                <label>Last Name</label>
+                <input type="text" name="" />
+
+                <label>Phone Number</label>
+                <input type="tel" />
+
+                <label>Confirm Password</label>
+                <input type="password" name="" />
+              </fieldset>
+            </div>
+          </form>
+        </div>
+        <div class="signup__button">
+          <button type="submit">Create Account</button>
+          <p>Already have an account <a href="http://">Log in</a></p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
