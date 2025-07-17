@@ -1,0 +1,33 @@
+/* roboto-bold */
+@font-face {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 700;
+	font-stretch: 100%;
+	src: local("Roboto Bold"), local("Roboto-Bold"), url(roboto-bold.woff2) format("woff2");
+}
+/* roboto-extrabold */
+@font-face {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 800;
+	font-stretch: 100%;
+	src: local("Roboto ExtraBold"), local("Roboto-ExtraBold"), url(roboto-extrabold.woff2) format("woff2");
+}
+/* roboto */
+@font-face {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 400;
+	font-stretch: 100%;
+	src: local("Roboto Regular"), local("Roboto-Regular"), url(roboto.woff2) format("woff2");
+}
+/* roboto-semibold */
+@font-face {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 600;
+	font-stretch: 100%;
+	src: local("Roboto SemiBold"), local("Roboto-SemiBold"), url(roboto-semibold.woff2) format("woff2");
+}
+

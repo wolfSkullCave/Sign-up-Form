@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up signup__form</title>
+    <title>Sign Up Form</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="signup">
+      <!-- Left Pane: Logo and Image Credit -->
       <div class="signup__left">
         <div class="signup__logo">
-          <img src="images/odin-lined.png" alt="" />
+          <img src="images/odin-lined.png" alt="Odin logo" />
           <h1>Odin</h1>
         </div>
         <div class="signup__img-credit">
@@ -24,50 +25,80 @@
           </p>
         </div>
       </div>
+
+      <!-- Right Pane: Text, Form, and Button -->
       <div class="signup__right">
         <div class="signup__text">
           <h2>
             This is not a real service! You know you need something like this in
-            your life to help you realise your deepest dreams.<br />
-            Sign up now to get started.
+            your life to help you realise your deepest dreams. Sign up now to
+            get started.
           </h2>
           <h2>You <em>know</em> you want to.</h2>
         </div>
+
         <div class="signup__form">
           <h2>Let's do this!</h2>
-
           <form action="" id="signupForm">
-            <div class="signup__formLeft">
-              <fieldset>
-                <label>First Name</label>
-                <input type="text" name="" />
+            <fieldset>
+              <div class="signup__field">
+                <label for="name">First Name</label>
+                <input type="text" id="name" name="name" />
+              </div>
+              <div class="signup__field">
+                <label for="surname">Last Name</label>
+                <input type="text" id="surname" name="surname" />
+              </div>
+            </fieldset>
 
-                <label>Email</label>
-                <input type="email" name="" />
+            <fieldset>
+              <div class="signup__field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" />
+              </div>
+              <div class="signup__field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+            </fieldset>
 
-                <label>Password</label>
-                <input type="password" name="" />
-              </fieldset>
-            </div>
-            <div class="signup__formRight">
-              <fieldset>
-                <label>Last Name</label>
-                <input type="text" name="" />
-
-                <label>Phone Number</label>
-                <input type="tel" />
-
-                <label>Confirm Password</label>
-                <input type="password" name="" />
-              </fieldset>
-            </div>
+            <fieldset>
+              <div class="signup__field">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+              </div>
+              <div class="signup__field">
+                <label for="confirm_password">Confirm Password</label>
+                <input
+                  type="password"
+                  id="confirm_password"
+                  name="confirm_password"
+                  required
+                />
+              </div>
+            </fieldset>
           </form>
         </div>
+
         <div class="signup__button">
-          <button type="submit">Create Account</button>
-          <p>Already have an account <a href="http://">Log in</a></p>
+          <button type="submit" form="signupForm">Create Account</button>
+          <p>Already have an account? <a href="#">Log in</a></p>
         </div>
       </div>
     </div>
+
+    <!-- Password Match Validation -->
+    <script>
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (e) {
+          const password = document.getElementById("password").value;
+          const confirm = document.getElementById("confirm_password").value;
+          if (password !== confirm) {
+            alert("Passwords do not match!");
+            e.preventDefault();
+          }
+        });
+    </script>
   </body>
 </html>
